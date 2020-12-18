@@ -17,6 +17,13 @@ clients.push(client1, client2, client3);
 console.log(clients)
 
 
+function myFunction() {
+    document.getElementById("selectClient");
+    document.getElementById("societeName").innerHTML = client1.nomSociete;
+    document.getElementById("name").innerHTML = client1.nom;
+}
+
+
 // PARTIE TABLEAU
 
 
@@ -29,39 +36,86 @@ function Produits(nom, prix, quantite, montant) {
     this.montant = montant
 }
 
-var produit1 = new Produits("Télé", 150, 149, 148);
+var produit1 = new Produits("Télé", 150);
 var produit2 = new Produits("PC", 1200);
-var produit3 = new Produits("chargeur", 15);
-var produit4 = new Produits("paire de chaussette", 5);
+var produit3 = new Produits("Chargeur", 15);
 
-produits.push(produit1, produit2, produit3, produit4);
-
+produits.push(produit1, produit2, produit3);
 
 
-function afficher() {
-    document.getElementById("libelle").innerHTML = produit1.nom;
-    document.getElementById("prixUnitaire").innerHTML = produit1.prix;
+
+function Function1() {
+    var s= document.getElementById("mySelect");
+    var mySelect = s.options[s.selectedIndex].value;
+    if (mySelect == 1){
+        document.getElementById("libelle").innerHTML = produit1.nom;
+        document.getElementById("prixUnitaire").innerHTML = produit1.prix; 
+    }else if (mySelect == 2){
+        document.getElementById("libelle").innerHTML = produit2.nom; 
+        document.getElementById("prixUnitaire").innerHTML = produit2.prix;        
+    }else {
+        document.getElementById("libelle").innerHTML = produit3.nom;
+        document.getElementById("prixUnitaire").innerHTML = produit3.prix; 
+    }
 }
 
 
- function afficher1() {
-    document.getElementById("libelle1").innerHTML = produit2.nom;
-    document.getElementById("prixUnitaire1").innerHTML = produit2.prix;
- }
 
- function afficher2() {
-    document.getElementById("libelle2").innerHTML = produit3.nom;
-    document.getElementById("prixUnitaire2").innerHTML = produit3.prix;
- }
+function Function2() {
 
- function afficher3() {
-    document.getElementById("libelle3").innerHTML = produit4.nom;
-    document.getElementById("prixUnitaire3").innerHTML = produit4.prix;
- }
+    var s= document.getElementById("mySelect2");
+    var mySelect2 = s.options[s.selectedIndex].value;
+    if (mySelect2 == 1){
+        document.getElementById("libelle1").innerHTML = produit1.nom;
+        document.getElementById("prixUnitaire1").innerHTML = produit1.prix; 
+    }else if (mySelect2 == 2){
+        document.getElementById("libelle1").innerHTML = produit2.nom; 
+        document.getElementById("prixUnitaire1").innerHTML = produit2.prix;        
+    }else {
+        document.getElementById("libelle1").innerHTML = produit3.nom;
+        document.getElementById("prixUnitaire1").innerHTML = produit3.prix; 
+    }
+}
 
 
+function Function3() {
+    var s= document.getElementById("mySelect3");
+    var mySelect3 = s.options[s.selectedIndex].value;
+    if (mySelect3 == 1){
+        document.getElementById("libelle2").innerHTML = produit1.nom;
+        document.getElementById("prixUnitaire2").innerHTML = produit1.prix; 
+    }else if (mySelect3 == 2){
+        document.getElementById("libelle2").innerHTML = produit2.nom;   
+        document.getElementById("prixUnitaire2").innerHTML = produit2.prix;      
+    }else {
+        document.getElementById("libelle2").innerHTML = produit3.nom;
+        document.getElementById("prixUnitaire2").innerHTML = produit3.prix; 
+    }
+}
 
 
+function Function4() {
+    var s= document.getElementById("mySelect4");
+    var mySelect4 = s.options[s.selectedIndex].value;
+    if (mySelect4 == 1){
+        document.getElementById("libelle3").innerHTML = produit1.nom;
+        document.getElementById("prixUnitaire3").innerHTML = produit1.prix; 
+    }else if (mySelect4 == 2){
+        document.getElementById("libelle3").innerHTML = produit2.nom;    
+        document.getElementById("prixUnitaire3").innerHTML = produit2.prix;     
+    }else {
+        document.getElementById("libelle3").innerHTML = produit3.nom;
+        document.getElementById("prixUnitaire3").innerHTML = produit3.prix; 
+    }
+}
+
+function Calcul(){
+    var z = document.getElementById("montant");
+    var montant = z.option[z.selectedIndex].quantite;
+    montant = prixUnitaire * quantite;
+    document.getElementById("montant").innerHTML = montant;
+
+}
 
 
 
