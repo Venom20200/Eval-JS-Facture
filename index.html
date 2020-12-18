@@ -121,21 +121,27 @@
 
 
     <section class="partieCentrale">
+
         <main>
             <p>À :</p>
             <br>
-            <select>
+            <select id="selectClient" onchange="myFunction()">
                 <option>Nouveau Client</option>
                 <option>You and I production</option>
                 <option>Netscape 2.0</option>
                 <option>Starcraft Unity</option>
                 <option>Godus</option>
             </select>
-            <input type="text" id="name" name="name" size="26" placeholder="Nom de la société">
+            <input type="text" id="societeName" name="name" size="26" placeholder="Nom de la société">
+
             <input type="text" id="name" name="name" size="26" placeholder="Nom">
-            <input type="text" id="name" name="name" size="26" placeholder="Rue">
-            <input type="text" id="name" name="name" size="26" placeholder="Code postal, Ville">
-            <input type="text" id="name" name="name" size="26" placeholder="Numéro de téléphone">
+
+            <input type="text" id="rue" name="name" size="26" placeholder="Rue">
+
+            <input type="text" id="ville" name="name" size="26" placeholder="Code postal, Ville">
+
+            <input type="text" id="tel" name="name" size="26" placeholder="Numéro de téléphone">
+
         </main>
         <aside>
             <p>EXPÉDIER À:</p>
@@ -175,61 +181,57 @@
             <tbody class="body_detail">
                 <tr>
 
-                    <td><select type="select"  onclick="afficher()">
-                            <option id="prod1" value="" onclick="afficher1()">0001EF</option>
-                            <option id="prod2" value="" >0002EF</option>
-                            <option id="prod3" value="">0003EF</option>
-                            <option id="prod4" value="">0004EF</option>
-                            <option id="prod5" value="">0005EF</option>
+                    <td><select type="select" id="mySelect" onchange="Function1()">
+                            <option></option>
+                            <option id="prod1" value="1">0001EF</option>
+                            <option id="prod2" value="2" >0002EF</option>
+                            <option id="prod3" value="3">0003EF</option>
                     </td>
                     <td id="libelle"></td>
                     <td id="prixUnitaire"></td>
-                    <td><input type="text" placeholder="0"></td>
+                    <td><input id="quantite" type="text" placeholder="0"></td>
                     <td id="montant"></td>
                 </tr>
 
                 <tr>
 
-                    <td><select type="select" onclick="afficher1()">
-                        <option value="">0001EF</option>
-                        <option value="">0002EF</option>
-                        <option value="">0003EF</option>
-                        <option value="">0004EF</option>
-                        <option value="">0005EF</option>
+                    <td><select type="select" id="mySelect2" onchange="Function2()">
+                        <option></option>
+                        <option value="1">0001EF</option>
+                        <option value="2">0002EF</option>
+                        <option value="3">0003EF</option>
                     </td>
                     <td id="libelle1"></td>
                     <td id="prixUnitaire1"></td>
-                    <td><input type="text" placeholder="0"></td>
+                    <td><input id="quantite1" type="text" placeholder="0"></td>
                     <td id="montant1"></td>
                 </tr>
 
                 <tr>
 
-                    <td><select type="select" onclick="afficher2()">
-                        <option value="">0001EF</option>
-                        <option value="">0002EF</option>
-                        <option value="">0003EF</option>
-                        <option value="">0004EF</option>
-                        <option value="">0005EF</option>
+                    <td><select type="select" id="mySelect3" onchange="Function3()">
+                        <option></option>
+                        <option value="1">0001EF</option>
+                        <option value="2">0002EF</option>
+                        <option value="3">0003EF</option>
                     </td>
                     <td id="libelle2"></td>
                     <td id="prixUnitaire2"></td>
-                    <td><input type="text" placeholder="0"></td>
+                    <td><input id="quantite2" type="text" placeholder="0"></td>
                     <td id="montant2"></td>
                 </tr>
                 
                 <tr>
 
-                    <td><select type="select" onclick="afficher3()">
-                        <option value="">0001EF</option>
-                        <option value="">0002EF</option>
-                        <option value="">0003EF</option>
-                        <option value="">0004EF</option>
-                        <option value="">0005EF</option>
+                    <td><select type="select" id="mySelect4" onchange="Function4()">
+                        <option></option>
+                        <option value="1">0001EF</option>
+                        <option value="2">0002EF</option>
+                        <option value="3">0003EF</option>
                     </td>
                     <td id="libelle3"></td>
                     <td id="prixUnitaire3"></td>
-                    <td><input type="text" placeholder="0"></td>
+                    <td><input id="quantite3" type="text" placeholder="0"></td>
                     <td id="montant3"></td>
 
                 </tr>
