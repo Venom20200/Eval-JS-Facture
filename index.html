@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eval JS facture</title>
+
+
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ************ PARTIE HAUTE DE LA FACTURE *********** -->
+
+    <section>
+
+        <h1>Facture</h1>
+
+        <form action="" method="">
+
+            <div class="div_info">
+                <div>
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name" placeholder="Nom de la société émettrice" required>
+                </div>
+
+                <div class="">
+                    <label for="adress"></label>
+                    <input type="text" name="adress" id="name" placeholder="Adresse de la société" required>
+                </div>
+
+                <div>
+                    <label for="phone"></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Entrez un numéro de téléphone valide">
+                </div>
+
+                <div class="">
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Adresse de messagerie">
+                </div>
+            </div>
+
+
+            <div class="div_facture">
+                <div>
+                    <label for="facture">N° de facture</label>
+                    <input type="text" name="facture" id="facture" placeholder="1">
+                </div>
+
+
+                <div class="div_date">
+                    <p>Date :</p>
+                    <select name="jour" id="jour">
+
+                        <option value="">24</option>
+                        <option value="">23</option>
+                        <option value="">22</option>
+                        <option value="">21</option>
+                        <option value="">20</option>
+                        <option value="">19</option>
+                        <option value="">18</option>
+                        <option value="">17</option>
+                        <option value="">16</option>
+                        <option value="">15</option>
+                        <option value="">14</option>
+                        <option value="">13</option>
+                        <option value="">12</option>
+                        <option value="">11</option>
+                        <option value="">10</option>
+                        <option value="">09</option>
+                        <option value="">08</option>
+                        <option value="">07</option>
+                        <option value="">06</option>
+                        <option value="">05</option>
+                        <option value="">04</option>
+                        <option value="">03</option>
+                        <option value="">02</option>
+                        <option value="">01</option>
+                    </select>
+
+                    <select name="mois" id="mois">
+                        <option value="">12</option>
+                        <option value="">11</option>
+                        <option value="">10</option>
+                        <option value="">09</option>
+                        <option value="">08</option>
+                        <option value="">07</option>
+                        <option value="">06</option>
+                        <option value="">05</option>
+                        <option value="">04</option>
+                        <option value="">03</option>
+                        <option value="">02</option>
+                        <option value="">01</option>
+                    </select>
+
+                    <select name="année" id="annee">
+                        <option value="">2014</option>
+                        <option value="">2013</option>
+                        <option value="">2012</option>
+                        <option value="">2011</option>
+                        <option value="">2010</option>
+                        <option value="">2009</option>
+                        <option value="">2008</option>
+                        <option value="">2007</option>
+                        <option value="">2006</option>
+                        <option value="">2005</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+            </div>
+        </form>
+
+    </section>
+
+    <!-- *********** PARTIE CENTRALE *********** -->
+
+
+    <section class="partieCentrale">
+        <main>
+            <p>À :</p>
+            <br>
+            <select>
+                <option>Nouveau Client</option>
+                <option>You and I production</option>
+                <option>Netscape 2.0</option>
+                <option>Starcraft Unity</option>
+                <option>Godus</option>
+            </select>
+            <input type="text" id="name" name="name" size="26" placeholder="Nom de la société">
+            <input type="text" id="name" name="name" size="26" placeholder="Nom">
+            <input type="text" id="name" name="name" size="26" placeholder="Rue">
+            <input type="text" id="name" name="name" size="26" placeholder="Code postal, Ville">
+            <input type="text" id="name" name="name" size="26" placeholder="Numéro de téléphone">
+        </main>
+        <aside>
+            <p>EXPÉDIER À:</p>
+            <br>
+            <select>
+                <option>Nouveau client</option>
+                <option>Cabinet Gerard</option>
+                <option>Putrovski corporation</option>
+                <option>Chinchan family</option>
+                <option>La main invisible</option>
+            </select>
+            <input type="text" id="name" name="name" size="26" placeholder="Nom de la société">
+            <input type="text" id="name" name="name" size="26" placeholder="Nom">
+            <input type="text" id="name" name="name" size="26" placeholder="Rue">
+            <input type="text" id="name" name="name" size="26" placeholder="Code postal, Ville">
+            <input type="text" id="name" name="name" size="26" placeholder="Numéro de téléphone">
+        </aside>
+    </section>
+
+
+    <!-- *********** PARTIE TABLEAU *********** -->
+
+    <section class="section_tableau">
+        <table class="detail">
+
+            <thead>
+                <tr>
+                    <h2><strong>Détails des produits facturés</strong></h2>
+                    <th scope="col">Code produit</th>
+                    <th scope="col">Libellé produit</th>
+                    <th scope="col">Prix-unitaire en euros</th>
+                    <th scope="col">Quantité commandée</th>
+                    <th scope="col">Montant en Euros</th>
+                </tr>
+            </thead>
+
+            <tbody class="body_detail">
+                <tr>
+
+                    <td><select type="select"  onclick="afficher()">
+                            <option id="prod1" value="" onclick="afficher1()">0001EF</option>
+                            <option id="prod2" value="" >0002EF</option>
+                            <option id="prod3" value="">0003EF</option>
+                            <option id="prod4" value="">0004EF</option>
+                            <option id="prod5" value="">0005EF</option>
+                    </td>
+                    <td id="libelle"></td>
+                    <td id="prixUnitaire"></td>
+                    <td><input type="text" placeholder="0"></td>
+                    <td id="montant"></td>
+                </tr>
+
+                <tr>
+
+                    <td><select type="select" onclick="afficher1()">
+                        <option value="">0001EF</option>
+                        <option value="">0002EF</option>
+                        <option value="">0003EF</option>
+                        <option value="">0004EF</option>
+                        <option value="">0005EF</option>
+                    </td>
+                    <td id="libelle1"></td>
+                    <td id="prixUnitaire1"></td>
+                    <td><input type="text" placeholder="0"></td>
+                    <td id="montant1"></td>
+                </tr>
+
+                <tr>
+
+                    <td><select type="select" onclick="afficher2()">
+                        <option value="">0001EF</option>
+                        <option value="">0002EF</option>
+                        <option value="">0003EF</option>
+                        <option value="">0004EF</option>
+                        <option value="">0005EF</option>
+                    </td>
+                    <td id="libelle2"></td>
+                    <td id="prixUnitaire2"></td>
+                    <td><input type="text" placeholder="0"></td>
+                    <td id="montant2"></td>
+                </tr>
+                
+                <tr>
+
+                    <td><select type="select" onclick="afficher3()">
+                        <option value="">0001EF</option>
+                        <option value="">0002EF</option>
+                        <option value="">0003EF</option>
+                        <option value="">0004EF</option>
+                        <option value="">0005EF</option>
+                    </td>
+                    <td id="libelle3"></td>
+                    <td id="prixUnitaire3"></td>
+                    <td><input type="text" placeholder="0"></td>
+                    <td id="montant3"></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <!-- *********** PARTIE TOTAL *********** -->
+
+    <table class="total">
+
+        <tbody>
+
+            <tr>
+                <td>Sous-total</td>
+                <td class="bordure"></td>
+            </tr>
+
+            <tr>
+                <td>T.V.A 20,00%</td>
+                <td class="bordure"></td>
+            </tr>
+
+            <tr>
+                <td>Port & Manutention</td>
+                <td class="bordure"></td>
+            </tr>
+
+            <tr>
+                <td>Total du (total ttc)</td>
+                <td class="bordure"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div id="remise"></div>
+
+
+    <!-- *********** PARTIE INSTRUCTION *********** -->
+
+    <section class="instruction">
+        <p>Veuillez rédiger tous les chèques à l'ordre de <br> Pour toute question concerant cette facture, veuillez
+            contacter : DUPONT au <br> ou à l'adresse </p>
+    </section>
+
+    <p class="merci">Nous vous remercions de votre confiance</p>
+
+    <form>
+        <button class="imprimer"> <a  href="files/CV 2021.pdf" onclick="window.print()">Imprimer la page</a></button>
+    </form>
+
+
+    <script src="js/facture.js"></script>
+
+</body>
+
+</html>
